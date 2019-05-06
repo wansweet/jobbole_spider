@@ -13,7 +13,7 @@ from bole.function import get_md5
 class JobboleSpider(scrapy.Spider):
     name = "JobBole"
     allowed_domains = ["jobbole.com"]
-    start_urls = ['http://blog.jobbole.com/all-postswwwww/']
+    start_urls = ['http://blog.jobbole.com/all-post/']
 
     # def __init__(self):
     #     '''chrome放在spider中，防止每打开一个url就跳出一个chrome'''

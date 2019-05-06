@@ -65,12 +65,16 @@ COOKIES_ENABLED = False
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
-# ITEM_PIPELINES = {
-#     'scrapy.pipelines.images.ImagesPipeline': 2,
+ITEM_PIPELINES = {
+    'scrapy.pipelines.images.ImagesPipeline': 2
 #     'bole.pipelines.ArticleImagePipeline': 3,
 #     'bole.pipelines.MysqlTwistedPipline': 4,
-# }
+}
+
+# ImagesPipeline辅助配置项
+# 该字段的值为XxxItem中定义的存储图片链接的image_urls字段
 IMAGES_URLS_FIELD = "front_image_url"
+# 图片存储路径(绝对路径 or 相对路径)
 project_dir = os.path.abspath(os.path.dirname(__file__))
 IMAGES_STORE = os.path.join(project_dir, 'images')
 
